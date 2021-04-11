@@ -25,7 +25,7 @@ void Godzilla::Sound(){
   cout<<"กว้ากกกกกก"<<endl;
 }
 bool Godzilla::isDeath(){
-  if(this->hp<=0)
+  if(hp<=0)
     return true;
   else
     return false;
@@ -44,7 +44,7 @@ void Godzilla::getHp(int x){
 }
 
 void Godzilla::setNext(Godzilla* t){
-    this->next = t;
+    next = t;
  }
 
 Godzilla Godzilla::operator-(Godzilla a){

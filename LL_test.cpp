@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
                        A.add_node(t);
                        }
    A.show_all();
-   A.atk_All(boss);
+   //A.atk_All(boss);
+   boss.Sound();
     //system("PAUSE");
     return 0;
 }
