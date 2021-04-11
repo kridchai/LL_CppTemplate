@@ -4,7 +4,6 @@ class LL{
 public:
        void add_node(Godzilla*&);
        void show_all();
-    
        ~LL();
        LL();
       

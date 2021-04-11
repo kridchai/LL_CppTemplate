@@ -20,3 +20,4 @@ void NODE::insert(NODE*& x){
      x->next=this;
 
      }
+ 
