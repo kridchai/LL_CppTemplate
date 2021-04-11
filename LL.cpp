@@ -1,8 +1,7 @@
 #include <iostream>
-#include"NODE.h"
-#include"LL.h"
-#include"Godzilla.h"
 using namespace std;
+#include "monster.h"
+#include"LL.h"
 LL::LL(){
        hol=NULL;
        size=0;

@@ -1,11 +1,14 @@
 #include <iostream>
 #include<cstdlib>
+using namespace std;
+#include"monster.h"
 #include"NODE.h"
 #include"LL.h"
-#include"Godzilla.h"
-using namespace std;
+
+
 int main(int argc, char *argv[])
-{  LL A;
+{  
+  LL A;
    int i;
    Godzilla *t;
 

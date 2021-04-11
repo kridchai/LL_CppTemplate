@@ -1,15 +1,16 @@
 #include <iostream>
+#include "monster.h"
 using namespace std;
-#include"Godzilla.h"
-
 Godzilla::Godzilla(int h,int p ,string n){
-      this->hp=h;
+      hp=h;
+      potion = p;
+      name = n;
       next=NULL;
       cout<<"adding "<<name<<endl;
       cout<<"adding "<<hp<<endl;
       cout<<"adding "<<potion<<endl;
 }
-  Godzilla:: ~Godzilla(){
+Godzilla:: ~Godzilla(){
       cout<<"Godzilla "<<name<<" "<<potion<<" "<<hp<<" is being deleted"<<endl; 
 }
 Godzilla* Godzilla::move_next(){
