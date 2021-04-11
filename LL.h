@@ -6,5 +6,7 @@ public:
        void show_all();
        ~LL();
        LL();
+       void atk_All(Godzilla);
+       void free_G(Godzilla*&);
       
 };
