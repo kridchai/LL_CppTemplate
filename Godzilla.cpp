@@ -15,7 +15,7 @@ Godzilla::Godzilla(int h,int p ,string n){
 Godzilla* Godzilla::move_next(){
       return next;
 }
-void  Godzilla:: show_Godzilla(){
+void  Godzilla::show_Godzilla(){
          cout<<"name is"<<name<<"hp is:"<<hp<<"potion is"<<potion<<endl;
  }
 void Godzilla::insert(Godzilla*& x){

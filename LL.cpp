@@ -20,14 +20,14 @@ LL::~LL(){
 }
 
 void LL::show_all(){
-     NODE* t=hol;
+     Godzilla* t=hol;
      int i;
      for(i=0;i<size;i++){
-       t->show_node();
+       t->show_Godzilla();
        t = t->move_next();
      }
 }
-void LL::add_node(NODE *&A){
+void LL::add_node(Godzilla *&A){
 
           hol->insert(A);
           hol=A;

@@ -1,5 +1,5 @@
 class LL{
-      Godzilla*hol;
+      Godzilla* hol;
       int size;
 public:
        void add_node(Godzilla*&);

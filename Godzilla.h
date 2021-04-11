@@ -1,7 +1,7 @@
 class Godzilla{
       int hp,potion;
       string name;
-      NODE* next;
+      Godzilla* next;
 public:
         Godzilla(int hp = 100,int potion = 100,string name = "Unknow");
         void show_Godzilla();
