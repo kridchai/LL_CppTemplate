@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
                        A.add_node(t);
                        }
    A.show_all();
-   //A.atk_All(boss);
-   boss.Sound();
+   A.atk_All(boss);
+   boss.show_Godzilla();
     //system("PAUSE");
     return 0;
 }

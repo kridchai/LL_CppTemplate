@@ -62,7 +62,7 @@ void LL::free_G(Godzilla*& A){
 
    }
  }
-void LL::atk_All(Godzilla A)
+void LL::atk_All(Godzilla A&)
 {
   int sumAtk = 0;
   Godzilla* t = hol;
@@ -70,19 +70,21 @@ void LL::atk_All(Godzilla A)
     sumAtk+=t->knowAtk();
     t = t->move_next();
   }
+  cout<<"sum atk is"<<sumAtk;
   t = hol;
   for(int i = 0;i<size;i++){
-     *t = *t-A;
+    // *t = *t-A;
     if(t->isDeath())
     {
       cout<<"Report Godzilla Death"<<endl;
-      free_G(t);
+      this->free_G(t);
     }
     else
       t->Sound();
     t = t->move_next();
   }
   A.getHp(A.knowHp()-sumAtk);
+  cout<<"hp boss is"<<A.knowHp();
   if(A.isDeath())
     cout<<"Congratulation Boss is down";
   else{
