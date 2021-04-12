@@ -62,7 +62,7 @@ void LL::free_G(Godzilla*& A){
 
    }
  }
-void LL::atk_All(Godzilla A&)
+void LL::atk_All(Godzilla &A)
 {
   int sumAtk = 0;
   Godzilla* t = hol;
@@ -70,24 +70,28 @@ void LL::atk_All(Godzilla A&)
     sumAtk+=t->knowAtk();
     t = t->move_next();
   }
-  cout<<"sum atk is"<<sumAtk;
+  cout<<"sum atk is"<<sumAtk<<endl;
   t = hol;
   for(int i = 0;i<size;i++){
-    // *t = *t-A;
+     t->getHp(t->knowHp()-A.knowAtk());
     if(t->isDeath())
     {
       cout<<"Report Godzilla Death"<<endl;
-      this->free_G(t);
+     free_G(t);
     }
-    else
-      t->Sound();
+    else{
+      cout<<"Godzilla name: "<<t->knowName()<<"คำราม"<<endl;
+       t->Sound();
+    }
+     
     t = t->move_next();
   }
   A.getHp(A.knowHp()-sumAtk);
-  cout<<"hp boss is"<<A.knowHp();
+  cout<<"hp boss remaining "<<A.knowHp()<<endl;
   if(A.isDeath())
     cout<<"Congratulation Boss is down";
   else{
+    cout<<"Godzilla name: "<<A.knowName()<<" คำราม"<<endl;
     A.Sound();
     cout<<"Godzila is stay alive"<<endl;
   }

@@ -12,6 +12,7 @@ public:
         bool isDeath();
         int knowHp();
         int knowAtk();
+        std::string knowName();
         void getHp(int);
         Godzilla operator-(Godzilla);
         Godzilla* move_next();

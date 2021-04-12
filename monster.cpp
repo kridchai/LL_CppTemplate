@@ -48,9 +48,9 @@ void Godzilla::setNext(Godzilla* t){
  }
 
 Godzilla Godzilla::operator-(Godzilla a){
-Godzilla n;
-n.hp = hp-a.atk;
-n.atk = atk;
-n.name = name;
-return n;
+this->getHp(hp-a.atk);
+return *this;
+}
+string Godzilla:: knowName(){
+  return name;
 }
