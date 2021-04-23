@@ -42,7 +42,8 @@ void LL::free_G(Godzilla*& A){
      delete(t);
      size--;
    }
-   while(t!=NULL)
+   else{
+       while(t!=NULL)
    {
      previous = t;
      t = t->move_next();
@@ -52,7 +53,7 @@ void LL::free_G(Godzilla*& A){
        size--;
        previous->setNext(NULL);
      }
-     if(t==A&&t->move_next()!=NULL)
+     else if(t==A&&t->move_next()!=NULL)
      {
        Godzilla *f = t->move_next();
        delete(t);
@@ -61,6 +62,8 @@ void LL::free_G(Godzilla*& A){
      }
 
    }
+  }
+  
  }
 void LL::atk_All(Godzilla &A)
 {
@@ -72,12 +75,13 @@ void LL::atk_All(Godzilla &A)
   }
   cout<<"sum atk is"<<sumAtk<<endl;
   t = hol;
-  for(int i = 0;i<size;i++){
+  while(t!=NULL){
      t->getHp(t->knowHp()-A.knowAtk());
     if(t->isDeath())
     {
       cout<<"Report Godzilla Death"<<endl;
      free_G(t);
+     cout<<"Godzilla is remaining "<<size<<" unit"<<endl;
     }
     else{
       cout<<"Godzilla name: "<<t->knowName()<<"คำราม"<<endl;
